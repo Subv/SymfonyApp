@@ -1,0 +1,3 @@
+app:
+    resource: "@TrinityAppBundle/Controller/DefaultController.php"
+    type: annotation
