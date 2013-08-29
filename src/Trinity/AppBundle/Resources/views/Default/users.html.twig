@@ -1,0 +1,7 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    Users: <br/>
+    {% for user in users %}
+        {{ user.username }}
+    {% endfor %}
+{% endblock %}
