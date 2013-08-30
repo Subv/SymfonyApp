@@ -12,4 +12,5 @@ script: phpunit -c app
 notifications:
   email:
     - subv2112@gmail.com
+    - hramires01@gmail.com
   irc: "irc.rizon.net#trinity"
