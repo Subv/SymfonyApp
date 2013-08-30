@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Trinity\AppBundle\Entity\Account;
 
-class DefaultController extends FOSRestController
+class RestController extends FOSRestController
 {
     /**
      * @Route("/users")
@@ -34,13 +34,5 @@ class DefaultController extends FOSRestController
         }
 
         return array("user" => $user);
-    }
-
-    /**
-     * @Route("/{name}", defaults={"name" = "Sebas"})
-     */
-    public function indexAction($name)
-    {
-        return $this->render('TrinityAppBundle:Default:index.html.twig', array('name' => $name));
     }
 }

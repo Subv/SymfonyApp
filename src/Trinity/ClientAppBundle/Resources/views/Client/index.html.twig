@@ -1,0 +1,10 @@
+{% extends "TrinityClientAppBundle:Client:layout.html.twig" %}
+{% block body %}
+    <div ng-controller="UsersController">
+        <ul>
+            <li ng-repeat="user in users">
+                {[{user.username}]}
+            </li>
+        </ul>
+    </div>
+{% endblock %}
