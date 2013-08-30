@@ -1,0 +1,26 @@
+# Required by PagodaBox
+web1:
+    name: SymfonyApp
+    document_root: web/
+    default_gateway: app_dev.php
+    index_list: [app_dev.php]
+    php_version: 5.4.14
+
+    shared_writable_dirs:
+      - app/cache
+      - app/logs
+
+    php_extensions:
+        - intl
+        - mbstring
+        - xsl
+        - apc
+        - mysql
+        - pdo_mysql
+        - zip
+
+    after_build:
+        - "php bin/composer.phar install"
+
+    before_deploy:
+        - "php app/console doctrine:schema:update --force"
