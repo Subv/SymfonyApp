@@ -1,3 +1,4 @@
 app:
     resource: "@TrinityAppBundle/Controller/RestController.php"
     type: annotation
+    prefix: /api
