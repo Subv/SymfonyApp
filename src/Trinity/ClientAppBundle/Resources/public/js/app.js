@@ -1,7 +1,7 @@
 /**
  * Created by Subv on 29/08/13.
  */
-var myApp = angular.module('myApp', [], function ($interpolateProvider) {
+var myApp = angular.module('myApp', ["restangular"], function ($interpolateProvider) {
     $interpolateProvider.startSymbol('{[{');
     $interpolateProvider.endSymbol('}]}');
 });

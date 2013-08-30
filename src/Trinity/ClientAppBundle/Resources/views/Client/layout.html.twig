@@ -2,8 +2,11 @@
 <html ng-app="myApp">
 <head>
     <title>{% block title %} {% endblock %}</title>
-    {% javascripts  "@TrinityClientAppBundle/Resources/public/js/jquery-2.0.3.min.js"
+    {% javascripts
+    "@TrinityClientAppBundle/Resources/public/js/jquery-2.0.3.min.js"
+    "@TrinityClientAppBundle/Resources/public/js/underscore-min.js"
     "@TrinityClientAppBundle/Resources/public/js/angular.min.js"
+    "@TrinityClientAppBundle/Resources/public/js/restangular.js"
     "@TrinityClientAppBundle/Resources/public/js/app.js" %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
