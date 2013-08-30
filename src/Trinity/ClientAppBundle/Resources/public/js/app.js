@@ -6,9 +6,10 @@ var myApp = angular.module('myApp', ["restangular"], function ($interpolateProvi
     $interpolateProvider.endSymbol('}]}');
 });
 
-myApp.controller("UsersController", function UsersController($scope) {
-    $scope.users = [
-        {username: "A"},
-        {username: "B"}
-    ];
+myApp.config(function (RestangularProvider) {
+    RestangularProvider.setBaseUrl("api");
+});
+
+myApp.controller("UsersController", function ($scope, Restangular) {
+    $scope.users = Restangular.all("users").getList();
 });

@@ -19,7 +19,7 @@ class RestController extends FOSRestController
     {
         $users = $this->getDoctrine()->getRepository("TrinityAppBundle:Account")->findAll();
 
-        return array("users" => $users);
+        return $users;
     }
 
     /**
@@ -33,6 +33,6 @@ class RestController extends FOSRestController
             throw new NotFoundHttpException("User not found");
         }
 
-        return array("user" => $user);
+        return $user;
     }
 }
