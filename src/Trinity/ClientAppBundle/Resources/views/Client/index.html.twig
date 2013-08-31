@@ -1,11 +1,25 @@
 {% extends "TrinityClientAppBundle:Client:layout.html.twig" %}
 {% block body %}
     <div ng-controller="UsersController">
-        <button class="btn btn-info">OHAI</button>
+        <button class="btn btn-info">RBAC Trinity Management</button>
+        <button class="btn btn-info">About</button>
         <div class="alert alert-warning" ng-repeat="user in users">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong>Warning!</strong> Best check yo self, {[{ user.username | lowercase }]}, you're not looking too
             good.
         </div>
     </div>
+    <div>
+        <table border="1" colspan="1">
+            <tr>
+                <td>
+                    RBAC Permissions
+                <td>
+                    RBAC Account Permissions
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
 {% endblock %}
