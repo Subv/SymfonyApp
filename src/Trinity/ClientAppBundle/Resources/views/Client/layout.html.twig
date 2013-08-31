@@ -2,14 +2,20 @@
 <html ng-app="myApp">
 <head>
     <title>{% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% javascripts
     "@TrinityClientAppBundle/Resources/public/js/jquery-2.0.3.min.js"
     "@TrinityClientAppBundle/Resources/public/js/underscore-min.js"
     "@TrinityClientAppBundle/Resources/public/js/angular.min.js"
     "@TrinityClientAppBundle/Resources/public/js/restangular.js"
-    "@TrinityClientAppBundle/Resources/public/js/app.js" %}
+    "@TrinityClientAppBundle/Resources/public/js/app.js"
+    "@bootstrap_js" %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
+    {% stylesheets "@bootstrap_css"
+    filter="lessphp" %}
+    <link rel="stylesheet" href="{{ asset_url }}" media="screen"/>
+    {% endstylesheets %}
 </head>
 <body>
 {% block body %}{% endblock %}
