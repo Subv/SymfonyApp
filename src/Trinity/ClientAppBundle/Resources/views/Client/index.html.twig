@@ -1,8 +1,9 @@
 {% extends "TrinityClientAppBundle:Client:layout.html.twig" %}
 {% block body %}
     <div ng-controller="UsersController">
-        <div class="alert" ng-repeat="user in users">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <button class="btn btn-danger">OHAI</button>
+        <div class="alert alert-danger" ng-repeat="user in users">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong>Warning!</strong> Best check yo self, {[{ user.username }]}, you're not looking too good.
         </div>
     </div>

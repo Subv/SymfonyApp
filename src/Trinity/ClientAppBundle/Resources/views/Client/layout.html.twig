@@ -9,11 +9,10 @@
     "@TrinityClientAppBundle/Resources/public/js/angular.min.js"
     "@TrinityClientAppBundle/Resources/public/js/restangular.js"
     "@TrinityClientAppBundle/Resources/public/js/app.js"
-    "@bootstrap_js" %}
+    "@TrinityClientAppBundle/Resources/public/bootstrap/dist/js/bootstrap.js" %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
-    {% stylesheets "@bootstrap_css"
-    filter="lessphp" %}
+    {% stylesheets "@TrinityClientAppBundle/Resources/public/bootstrap/dist/css/bootstrap.css" filter="cssrewrite" %}
     <link rel="stylesheet" href="{{ asset_url }}" media="screen"/>
     {% endstylesheets %}
 </head>
