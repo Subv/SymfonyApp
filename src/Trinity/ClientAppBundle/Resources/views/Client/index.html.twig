@@ -1,19 +1,6 @@
 {% extends "TrinityClientAppBundle:Client:layout.html.twig" %}
 {% block body %}
 
-    <h1>Trinity RBAC Management Website</h1>
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <div ng-controller="UsersController">
         <button class="btn btn-info">OHai</button>
         <div class="alert alert-warning" ng-repeat="user in users">
@@ -22,15 +9,4 @@
             good.
         </div>
     </div>
-
-    <div class="”container”">
-        <table class="table">
-            <tr>
-                <td>RBAC Permissions</td>
-                <td>RBAC Account Permissions</td>
-            </tr>
-            …..
-        </table>
-
-
 {% endblock %}
